@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap";
+
+:root{
+  --color-green:#50fa7b;
+  --color: #282a36;
+}
+
+
+
+body{
+  background: #282a36;
+  
+}
+
+header{
+  padding: 32px;
+  background: rgba(0, 0,0, 0.1);
+  border-bottom: 1px solid #333;
+}
+ 
+.links{
+  text-align: center;
+}
+
+.links a{
+  color: white;
+  font-size: 18px;
+  line-height: 28px;
+  margin: 0 16px;
+  text-decoration: none;
+}
+
+.links a:hover{
+  color: var(--color-green);
+  transition: color 200ms;
+}
+
+/* ====  cards ==== **/
+.cards{
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--color);
+  display: grid;
+  cursor: pointer;  
+}
+
+
+:root{
+  --primary-color:var(--color-green);
+}
+/* valores globais*/
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none; /*retira  as marcações das listas*/
+  border: none;
+  
+}
+html,body{
+  min-height: 100vh; /*ocupa todo o espaço visível que está aparecendo na viewport dos navegadores*/
+}
+
+body{background-color: #282a36;
+  font-family:Roboto,sans-serif;
+  /* background-color: #f9f9f9; */
+  display:flex;
+  flex-direction:column;
+}
+.container{
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+footer{
+  margin-top: auto;
+}
+.button{
+  background-color:var(--color-green);
+  color:white;
+  display:block;
+  margin:16px 0;
+  padding:12px 16px;
+  width:100%;
+  border-radius:4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 6px1;
+  text-align:center;
+  cursor: pointer;
+  transition: all 0.2s;
+  /* para colocar o botao para baixo*/
+  align-self: end;
+
+}
+
+button:hover {
+  background-color: var(--color-green)
+}
+
+
+/* =========== HEADER ========= */
+header{
+  border-bottom: 1px solid #333;
+}
+
+header,footer{
+ /*  background-color:black; */
+  color:white;
+  width: 100%;
+  padding:32px 0;
+  text-align:center;
+}
+
+header div.container{
+  display:grid;
+  grid-template-columns:220px auto 280px;
+  align-items: center;
+  grid-gap:20px;
+}
+
+header div.container a{
+  justify-self: start;
+}
+
+/* =========== LOGO ============== */
+
+.logo h1{
+  color: white;
+  font-size:36px;
+  line-height: 46px;
+}
+
+.logo h2{
+  color: var(--color-green);
+  font-size: 14px;
+  line-height:16px;
+  letter-spacing:2px;
+}
+/* =========== SEARCH ================== */
+.search input{
+  width:100%;
+  padding:8px 16px;
+  border-radius: 2px;
+  font-size:16px;
+}
+
+/* =========== MENU PRIMARY =================*/
+nav.primary ul{
+  display:flex;
+  justify-content: space-between;
+}
+
+nav.primary ul li a{
+  display:flex;
+  align-items:center;
+  color:white;
+  transition: 200ms;
+}
+nav.primary ul li a:hover{
+  color: var(--color-green);
+}
+nav.primary ul li a i{
+  margin-right:8px;
+
+}
+
+/* =========== PRODUCT FORM =========== */
+section.form{
+ /*  background-color:#fff; */
+  padding:32px 24px;
+  margin:32px auto;
+  box-shadow: 2px 2px 2px -4px rgba(60,60,60,.9);
+  border:1px solid #efefef;
+  border-radius:8px;
+  max-width: 700px;
+  width: 90%;
+}
+
+section.form .header h3{
+  font-size:14px;
+  line-height: 24px;
+  letter-spacing:0.7px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:var(--primary-color);
+  margin-bottom: 16px;
+}
+
+
+form .fields{
+  margin-bottom: 64px;
+}
+
+form .item{
+  margin-bottom:16px;
+
+}
+
+form .item >div{
+  color:white;
+  text-transform: uppercase;
+  font-size:14px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+form .item input[type=text],
+form .item textarea{
+  width:100%;
+  padding:8px 16px;
+  box-shadow: 2px 2px 2px -4px rgba(63,63,63,0.9);
+  border:1px solid #b4a8a8;
+  border-radius:4px;
+  font-size:16px;
+}
+
+form .item textarea {
+  min-width: 150px;
+}
+
+/* ========== FOTOS UPLOAD========== */
+
+form .item #photos-upload{
+  position: relative;
+  display:block;
+  overflow: hidden;
+  width:200px;
+
+}
+
+form .item #photos-input{
+  width: 100%;
+  height: 100%;
+  display:block;
+  cursor: pointer;
+} 
+
+form .item #photos-preview{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:8px;
+  width:100%;
+  margin: 8px 0;
+}
+
+form .item #photos-preview .photo img{
+  width:100%;
+  height: 150px;
+  object-fit: contain; /*evita que a imagem fique esticado devido as configurações width e height*/
+}
+
+#photos-preview .photo{
+  position: relative;
+}
+
