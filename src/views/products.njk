@@ -1,0 +1,81 @@
+{% extends "layout.njk" %}
+
+{% block conteudo %}
+<link rel="stylesheet" href="stylesProducts.css">
+  <header>
+    <div class="container">
+      <a href="#">
+        <div class="logo">
+          <h1>{{dados.name}}</h1>
+          <h2>{{dados.lastName}}</h2>
+        </div>
+      </a>
+  
+      <form action="#" method="get" class="search">
+        <input type="text" name="filter"placeholder="Buscar por produtos">
+      </form>
+  
+      <nav class="primary">
+        <ul>
+          <li>
+            <a href="#">
+              <i class="material-icons">add</i>
+              {{dados.newAd}}
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="material-icons">account_circle</i>
+              {{dados.profile}}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container form">
+    <form class="card" method="POST" action="/products" enctype="multipart/form-data">
+      
+      <div class="header">
+          <h3>{{dados.newProd}} </h3>
+      </div>
+      <div class="fields">
+        <div class="item">
+          <div>{{dados.title}}</div>
+          <div>
+            <input type="text"name="name"placeholder="Digite o título do produto" >
+          </div>
+        </div>
+        <div class="item">
+          <div>{{dados.description}}</div>
+          <div>
+            <textarea name="description"></textarea>
+          </div>
+        </div>
+        <div class="item">
+          <div>{{dados.photos}}</div>
+          <div>
+            <div id="photos-upload">
+              <input 
+                id="photos-input"
+                type="file"
+                name="photos"
+                multiple
+                accept="image/*"
+			        >
+            </div>
+            <div id="photos-preview">    
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="button"type="submit">SALVAR</button>
+    </form>
+
+  </section>
+
+  <footer>Copyright Launchstore</footer>
+
+  {% endblock %}
