@@ -1,0 +1,26 @@
+{
+  "name": "cop-nunj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon --experimental-json-modules src/server.js",
+    "browsersync": "browser-sync start --proxy http://localhost:5000 --files 'public, src/views' "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "multer": "^1.4.2",
+    "nunjucks": "^3.2.3",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  }
+}
